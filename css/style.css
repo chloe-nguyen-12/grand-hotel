@@ -1,0 +1,559 @@
+body {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+/* sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 8rem;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  background: #eee;
+}
+.menu-icon {
+  margin-top: 3rem;
+  cursor: pointer;
+}
+.line {
+  height: 0.2rem;
+  width: 2.5rem;
+  background-color: #222;
+  margin-bottom: 0.6rem;
+}
+.line1,
+.line3 {
+  width: 1.8rem;
+  transition: all 0.3s;
+}
+.menu-icon:hover .line {
+  width: 2.5rem;
+}
+.social-icons-list {
+  list-style-type: none;
+  padding: 0px;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-even;
+  align-items: center;
+}
+.social-link {
+  font-size: 2rem;
+  color: #777;
+}
+.social-link:hover {
+  color: #daaa86;
+}
+.year {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* navigation */
+.navigation {
+  width: 40rem;
+  left: -40rem;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+      to top,
+      rgba(34, 32, 41, 1),
+      rgba(34, 32, 41, 0.8)
+    ),
+    url(../img/nav-bg.jpeg) center no-repeat;
+  background-size: cover;
+}
+.navigation-heading {
+  margin-top: 10rem;
+  font-family: "Josefin San", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  color: #deaa86;
+  text-align: center;
+}
+.navigation-search-input {
+  width: 30rem;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 1.6rem;
+  color: #deaa86;
+  font-family: "JosefinSans", sans-serif;
+  letter-spacing: 0.1rem;
+  outline: none;
+  border: 0.1rem solid #555;
+  border-radius: 10rem;
+}
+.navigation-search-input:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.navigation-search-btn {
+  border: none;
+  background-color: transparent;
+  color: #deaa86;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.navigation-search {
+  position: relative;
+}
+.navigation-list {
+  list-style-type: none;
+  padding: 0;
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation-link {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navigation-item {
+  position: relative;
+}
+.navigation-link::before {
+  /*Note 54*/
+  content: "";
+  width: 0px;
+  height: 0.1rem;
+  background: #deaa86;
+  position: absolute;
+  top: 1rem;
+  left: -4rem;
+  transition: 0.5s;
+}
+.navigation-link::after {
+  content: "";
+  width: 0px;
+  height: 0.1rem;
+  background: #deaa86;
+  position: absolute;
+  top: 1rem;
+  right: -4rem;
+  transition: 0.5s;
+}
+.navigation-link:hover {
+  color: #deaa86;
+}
+.navigation-link:hover::before,
+.navigation-link:hover::after {
+  width: 3rem;
+}
+.copyright {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.checkbox:checked ~ .navigation {
+  left: 8rem;
+}
+
+body > *:not(.navbar) {
+  margin-left: 8rem;
+}
+
+.header {
+  /* border: 2px red solid; */
+  height: 100vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(../img/header-1.jpeg) center no-repeat;
+  background-size: cover;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  height: 83px;
+  cursor: pointer;
+}
+.brand img {
+  width: 80px;
+}
+.brand h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: #deaa86;
+  letter-spacing: 0.2rem;
+}
+.banner {
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.banner-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.banner-paragraph {
+  font-size: 3rem;
+  font-weight: 300;
+}
+.banner-button {
+  width: 21rem;
+  padding: 1.2rem 2rem;
+  font-size: 2rem;
+  color: #333;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(to right, gold, goldenrod);
+}
+
+.about-us {
+  display: flex;
+  background-color: #ddd;
+}
+.about-us > div {
+  flex-basis: 50%;
+}
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem;
+}
+.about-us-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.underline {
+  /* border: 2px dotted green; */
+}
+.small-underline {
+  width: 9rem;
+  height: 1px;
+  background: #b85d1c;
+  margin: 0 auto 1rem auto;
+}
+.big-underline {
+  /* border: 2px solid red; */
+  width: 20rem;
+  height: 1px;
+  background: #b85d1c;
+  margin: 0;
+}
+.sub-heading {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  color: #b85d1c;
+}
+.about-us-paragraph {
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.about-us-btn {
+  width: 10rem;
+  padding: 0.7rem 0.5rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #b85d1c;
+  border: 1px solid #b85d1c;
+  cursor: pointer;
+}
+.btn-arrow {
+  margin-left: 0.5rem;
+  transition: 0.5s; /*Note 4*/
+}
+.about-us-btn:hover .btn-arrow {
+  margin-left: 1.5rem;
+}
+.about-us-images {
+  position: relative;
+}
+.image {
+  width: 320px; /*Step 1*/ /*Note 59*/
+  position: absolute;
+  top: 50%;
+  left: 50%; /* /Step1*/
+  box-shadow: rgba(0, 0, 0, 0.4) 0 3rem 6rem; /*Note 60*/
+  border: 0.18rem solid rgb(184, 93, 28);
+  border-radius: 0.4rem;
+}
+.img-1 {
+  /*Step 1*/ /*Note 61*/
+  transform: translate(-20%, -90%);
+}
+.img-2 {
+  /*Step 1*/ /*Note 61*/
+  transform: translate(-70%, -70%);
+}
+.img-3 {
+  /*Step 1*/ /*Note 61*/
+  transform: translate(-50%, -50%);
+}
+.img-4 {
+  /*Step 1*/ /*Note 61*/
+  transform: translate(-30%, -30%);
+}
+
+/* Note 58: là 1 tip, cho nó tự động căn giữa so với cha nó*/
+/* Note 59: scale 1 hướng thôi, hướng kia cho nó auto, k là bị vỡ hình đó. */
+/*Note 60: tạo shadow*/
+/*Note 61:-dịch đi ngược chiều x khoảng 20% of width of img;
+và dịch đi ngược chiều y 90% of height of img
+- thằng img-2 đè lên thằng 1, thằng 3 đè lên thằng 2, thằng 4 đè lên thằng 3.*/
+
+/*rooms */
+.rooms {
+  /* border: 3px dashed blue; */
+}
+.common-header {
+  padding: 5rem;
+  color: #b85d1c;
+  display: flex; /*Step 1*/
+  flex-direction: column;
+  align-items: center;
+}
+.common-heading {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+.rooms-cards-wrapper {
+  /*Step 1*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.room-card {
+  width: 35rem;
+  margin: 3rem;
+  background-color: #15141b;
+}
+.room-img {
+  width: 100%; /*Step 1*/ /*Note 62*/
+}
+.room-card-content {
+  color: #ddd;
+  padding: 1.5rem;
+}
+.room-card-heading {
+  text-transform: capitalization;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0; /*Note 63*/
+}
+.room-card-paragraph {
+  font-size: 1.2rem;
+  color: #777;
+}
+.room-price {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-align: right;
+  margin: 0; /*Note 63*/
+}
+.room-card-btn {
+  width: 10rem;
+  padding: 1rem 0.5rem;
+  font: size 1.1rem;
+  transform: uppercase;
+  color: #b85d1c;
+  background-color: transparent;
+  border: 1px solid #b85d1c;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+.rooms-btn-wrapper {
+  text-align: center;
+}
+.rooms-btn {
+  width: 15rem;
+  padding: 1.2rem 0.8rem;
+  margin: 2rem 0;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #b85d1c;
+  border: 0.2rem solid #b85d1c;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 15rem 6rem;
+  transition: 0.5s; /*Note 4*/
+}
+.rooms-btn:hover {
+  background: #b85d1c;
+  color: white;
+}
+
+/* Note 62: room-card nhỏ mà hình bự, nên nếu k 100% thì hình tràn ra ngoài và bị mất */
+/* Note 63: nó bị ảnh hưởng từ cha .room-card margin:3rem, nên h chỉnh lại */
+
+/* customer */
+.customer {
+  background-color: #15141b;
+  padding-bottom: 4rem;
+}
+.customer-paragraph {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ddd;
+  width: 50%;
+  margin: 1rem auto 6rem auto; /*Note 58*/
+  text-align: center;
+  border: 2px solid white;
+}
+.customer-card-wrapper {
+  /*Step 1*/
+  display: flex;
+  justify-content: space-evenly;
+}
+.customer-card {
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  width: 35rem;
+}
+.customer-img-wrapper {
+  margin: auto 0; /*Note 58*/
+}
+.customer-img {
+  width: 12rem;
+  margin-left: -1.2rem;
+}
+.customer-info {
+  padding: 1rem 1.5rem;
+}
+.customer-full-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.customer-paragraph-1 {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #b85d1c;
+}
+.customer-paragraph-2 {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/*footer*/
+.main-part {
+  /*Step 1*/
+  display: flex;
+  justify-content: space-between;
+  background-color: #1c1c1c;
+  padding: 2rem;
+}
+.footer-heading {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: goldenrod;
+  margin: 1 rem 0 3rem 0;
+}
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+}
+.footer-list-item {
+  margin-bottom: 1.5rem;
+}
+.footer-list-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #bbb;
+}
+.footer-form {
+  /*Step 1*/
+  display: flex;
+}
+.footer-input {
+  width: 15rem;
+  padding: 0.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.1rem;
+  color: #444;
+  outline: none;
+}
+.footer-btn {
+  padding: 0.8rem;
+  background-color: #b85d1c;
+  color: #ddd;
+  border: none;
+}
+.gallery {
+  /*Step 1*/
+  max-width: 30rem; /*Note 8*/
+}
+.gallery-images {
+  /*Step 1*/
+  display: flex;
+  flex-wrap: wrap;
+}
+.image-wrapper {
+  /*Step 1*/
+  width: 9rem; /*Note 8*/
+  margin: 0.2rem;
+  overflow: hidden; /*Note 64*/
+}
+.footer-img {
+  /*Step 1*/
+  width: 100%;
+  transition: all 0.5s; /*Note 4*/
+}
+.footer-img:hover {
+  transform: scale(1.3); /*Note 64*/
+  opacity: 0.8;
+}
+.creator-part {
+  /*Step 1*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #111;
+}
+.copyright-text {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+.text-right {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+.text-right i {
+  font-size: 1.3rem;
+  margin: 0.3rem;
+  color: tomato;
+}
+.text-right span {
+  color: gold;
+}
+
+/* Note 8: set width cho mỗi hình, xong mỗi hàng mình muốn max 3 hình thôi */
+
+/*Note 64:
+-nếu có 2 số thì số đầu scale theo chiều x, số sau scale theo chiều y.
+-khi hover vào img thì nó scale nhân 1.3 lần, hình tràn ra ngoài, mà mình k muốn vậy, thì overflow:hidden. */
